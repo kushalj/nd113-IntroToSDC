@@ -4,10 +4,10 @@
 #include "mymath.cpp" // Tau not pi
 
 
-float getDiameter(float distBeforeTurn, float distAfterTurn)
+static float getDiameter(float distBeforeTurn, float distAfterTurn)
 {
   float circumference = distAfterTurn - distBeforeTurn;
-  float diameter = 2 * (circumference / TAU);
+  float diameter = 2.0f * (circumference / TAU);
   return diameter;
 }
 
@@ -15,5 +15,5 @@ int main()
 {
   std::cout << std::fixed;
   std::cout << "Diameter: ";
-  std::cout << std::setprecision(16) << getDiameter(1.0, 6.0) << "\n";
+  std::cout << std::setprecision(16) << getDiameter(1.0f, 6.0f) << "\n";
 }

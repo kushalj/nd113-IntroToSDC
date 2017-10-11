@@ -1,3 +1,3 @@
 #include <math.h>
 
-float TAU = M_PI*2;
+static float TAU = float(M_PI) * 2.0f;
