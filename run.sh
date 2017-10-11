@@ -19,6 +19,7 @@ echo
 
 echo
 echo -e "\e[33mg++ $1.cpp\e[39m"
+/bin/rm a.out 2> /dev/null 
 [ -f "$1.cpp" ] && g++ $1.cpp || echo "The file does not exist"
 [ -f "./a.out" ] && ./a.out || echo "No compiled file"
 echo
