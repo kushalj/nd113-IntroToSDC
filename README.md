@@ -5,7 +5,7 @@ there is a run.sh file that assumes builders are installed and tries to build al
 
     cd ProjectFolder
  
-    ./run.sh projectFilename
+    ../run.sh projectFilename
 
 will build
 - projectFilename.py
