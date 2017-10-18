@@ -1,0 +1,26 @@
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:26:2: error: unexpected namespace name 'std': expected expression
+        std.cout << "In " << numTrials << " trials there were " << heads << " heads and " << tails << " tails";
+        ^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:27:2: error: unexpected namespace name 'std': expected expression
+        std.cout << "PERCENT HEADS: " << 100f*(float) heads/ (float) numTrials, "percent";
+        ^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:27:38: error: invalid digit 'f' in decimal constant
+        std.cout << "PERCENT HEADS: " << 100f*(float) heads/ (float) numTrials, "percent";
+                                            ^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:32:1: error: unknown type name 'func'
+func main() {
+^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:33:2: error: unknown type name 'var'
+        var numTrials = 100000
+        ^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:33:24: error: expected ';' at end of declaration
+        var numTrials = 100000
+                              ^
+                              ;
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:39:14: error: use of undeclared identifier 'i'
+        for i := 1; i <= numTrials; i++ {
+                    ^
+/Users/kushal/code/udacity/nd113-IntroToSDC/probability/coinflips.cpp:39:30: error: use of undeclared identifier 'i'
+        for i := 1; i <= numTrials; i++ {
+                                    ^
+8 errors generated.
