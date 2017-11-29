@@ -2,12 +2,14 @@
 
 
 def vector_dot_product(vectorA, vectorB):
-    dp = 0
+    vdp = 0
     if len(vectorA) == len(vectorB):
-        for i in range(len(vectorA)):
-                dp += vectorA[i] * vectorB[i]
+        vp = [vectorA[i]*vectorB[i] for i in range(len(vectorA))]
+        print(vp)
+        vdp = sum(vp)
 
-    return dp
+
+    return vdp
 
 
 def transpose(matrix):
@@ -69,9 +71,14 @@ def matrix_addition(matrixA, matrixB):
 def matrix_multiplication(matrixA, matrixB):
     product = []
     matrixB_T = transpose(matrixB)
+    # for each row
+    # if len(matrixA) != len(matrixB_T):
+    #     raise(ValueError, "matrix can't be multiplied")
+
     for i in range(len(matrixA)):
         row = []
-        for j in range(len(matrixB_T)):
+        # for every col in the row
+            for j in range(len(matrixB_T)):
             dp = vector_dot_product(matrixA[i], matrixB_T[j])
             row.append(dp)
 
@@ -116,7 +123,8 @@ def inverse_matrix(matrix):
         c = matrix[1][0]
         d = matrix[1][1]
 
-        inverse_determinant = 1/(a*d - b*c)
+        determinant = (a*d - b*c)
+        inverse_determinant = 1/determinant
 
         traceAI_minusA = [ [d, -b],
                            [-c, a] ]
@@ -167,5 +175,6 @@ print(matrix_addition(A, B), "\n")
 print("Multiplication")
 print(matrix_multiplication( [[1,2]], [[3],[4]] ), " ([[11]]?)\n")
 print("A  : ", A)
+
 print("A*I: ", matrix_multiplication(A, identity_matrix(3)), "\n")
 print("A*B_T: ", matrix_multiplication(A, transpose(B)), "\n")
