@@ -59,6 +59,7 @@ int main() {
       }
       cout << endl;
     }
+    print();
     print(transpose(matrix));
   }
 

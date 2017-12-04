@@ -5,6 +5,7 @@ using namespace std;
 typedef vector< vector<int> > gridInt;
 typedef vector< vector<float> > gridFloat;
 
+void print();
 void print(int val);
 void print(float val);
 void print(double val);

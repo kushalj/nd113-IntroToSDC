@@ -6,6 +6,10 @@ using namespace std;
 typedef vector< vector<int> > gridInt;
 typedef vector< vector<float> > gridFloat;
 
+void print() {
+  cout << endl;
+}
+
 void print(int val) {
   cout << val << endl;
 }
