@@ -5,9 +5,9 @@
 #include <iostream>
 #include <stdexcept>
 
-typedef std::vector< std::vector<float> > gridFloat;
-typedef std::vector<float> vectorFloat;
-typedef std::vector<float>::size_type vectorSize;
+typedef std::vector < std::vector <float> > gridFloat;
+typedef std::vector <float> vectorFloat;
+typedef std::vector <float>::size_type vectorSize;
 
 class Matrix
 {
