@@ -18,10 +18,12 @@ go clean
 echo
 
 echo
-echo -e "\033[33mg++ $1.cpp\033[39m"
+echo -e "\033[33mclang++ $1.cpp\033[39m"
 /bin/rm a.out 2> /dev/null 
-[ -f "$1.cpp" ] && xcrun clang++ -std=c++11 -stdlib=libc++ -Weverything $1.cpp || echo "The file does not exist"
+##[ -f "$1.cpp" ] && xcrun clang++ -std=c++11 -stdlib=libc++ -Weverything $1.cpp || echo "The file does not exist"
+[ -f "$1.cpp" ] && xcrun clang++ -std=c++11 -stdlib=libc++ $1.cpp $2 || echo "The file does not exist"
 [ -f "./a.out" ] && ./a.out || echo "No compiled file"
 echo
+
 
 
