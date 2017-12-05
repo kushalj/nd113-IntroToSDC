@@ -29,6 +29,9 @@ typedef vector <float> vectorFloat;
 // a grid of floats
 typedef vector <vectorFloat> gridFloat;
 
+// might not need this
+// typedef vector <char>::size_type vectorChar;
+
 
 /**
 	TODO - implement this function
