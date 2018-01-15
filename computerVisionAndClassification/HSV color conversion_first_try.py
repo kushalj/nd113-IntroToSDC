@@ -5,7 +5,7 @@
 
 # ### Import resources
 
-# In[2]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
@@ -19,7 +19,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # ### Read in RGB image
 
-# In[3]:
+# In[2]:
 
 
 # Read in the image
@@ -32,7 +32,7 @@ plt.imshow(image)
 # 
 # Visualize the green threshold you defined in the previous, consistent green color case.
 
-# In[14]:
+# In[3]:
 
 
 # Define our color selection boundaries in RGB values
@@ -53,7 +53,7 @@ plt.imshow(masked_image)
 
 # ### Convert to HSV
 
-# In[5]:
+# In[4]:
 
 
 # Convert to HSV
@@ -76,13 +76,13 @@ ax3.imshow(v, cmap='gray')
 
 # ### TODO: Mask the green area using HSV color space
 
-# In[32]:
+# In[19]:
 
 
 ## TODO: Define the color selection boundaries in HSV values
 # Define our color selection boundaries in RGB values
-lower_green = np.array([0, 0, 0])
-upper_green = np.array([110, 255, 255])
+lower_green = 0
+upper_green = 130
 
 
 ## TODO: Define the masked area and mask the image
@@ -90,7 +90,7 @@ upper_green = np.array([110, 255, 255])
 image2 = np.copy(image)
 
 # Define the masked area
-mask = cv2.inRange(image2, lower_green, upper_green)
+mask = cv2.inRange(image2[:,:,0], lower_green, upper_green)
 
 # Mask the image to let the car show through
 masked_image = np.copy(image2)
